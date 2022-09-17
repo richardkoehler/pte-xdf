@@ -1,4 +1,24 @@
-"""A module for loading XDF files recorded with TMSi amplifiers."""
+"""A module for loading XDF files recorded with TMSi amplifiers.
+
+This module contains the following functions:
+
+- `read_raw_xdf(
+    xdf_fname,
+    stream_picks,
+    scale,
+    verbose,
+)` - Reader for .xdf files recorded with TMSi amplifiers.
+
+This module contains the following classes:
+
+- `RawXDF(
+    xdf_fname,
+    stream_picks,
+    scale,
+    verbose,
+)` - Raw object from .xdf file recorded with a TMSi amplifier.
+
+"""
 import os
 
 import mne
@@ -35,9 +55,29 @@ def read_raw_xdf(
     raw : instance of RawXDF
         A Raw object containing XDF data.
 
+    Examples
+    --------
+
+    Loading a recording and using only the stream with 'stream_id' = 1.
+
+    >>> fname = "my_recording.xdf"
+    >>> raw = pte_xdf.read_raw_xdf(fname=fname, stream_picks=1, verbose=True)
+    Reading file:
+    my_recording.xdf
+    Number of streams in file: 1.
+    Streams being loaded: 1.
+
+    Loading a recording and using only the stream with 'name' = 'SAGA'.
+
+    >>> raw = pte_xdf.read_raw_xdf(fname, stream_picks='SAGA', verbose=True)
+    Reading file:
+    my_recording.xdf
+    Number of streams in file: 1.
+    Streams being loaded: SAGA.
+
     See Also
     --------
-    mne.io.Raw : Documentation of attribute and methods.
+    mne.io.Raw : Documentation of attributes and methods.
     """
     return RawXDF(
         xdf_fname=xdf_fname,
@@ -70,7 +110,7 @@ class RawXDF(mne.io.BaseRaw):
 
     See Also
     --------
-    mne.io.Raw : Documentation of attribute and methods.
+    mne.io.Raw : Documentation of attributes and methods.
     """
 
     def __init__(
@@ -82,7 +122,7 @@ class RawXDF(mne.io.BaseRaw):
     ) -> None:
         xdf_fname = os.path.abspath(xdf_fname)
         if verbose:
-            print("Reading file:\n", xdf_fname)
+            print(f"Reading file:\n{xdf_fname}")
         streams, _ = pyxdf.load_xdf(xdf_fname)
 
         stream = self._pick_streams(streams, stream_picks)
