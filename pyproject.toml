@@ -13,7 +13,7 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dynamic = ["version", "description"]
-keywords = ["eeg", "ieeg", "tmsi"]
+keywords = ["xdf", "tmsi", "eeg", "ieeg"]
 license = {file = "LICENSE"}
 maintainers = [
   {name = "Richard M. Köhler"},
@@ -36,6 +36,7 @@ dev = [
   "black",
   "isort",
   "mypy",
+  "pip-tools",
   "pylint",
   "pytest",
   "pytest-cov",
