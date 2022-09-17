@@ -135,7 +135,7 @@ class RawXDF(mne.io.BaseRaw):
             _description_
         """
         if isinstance(stream_picks, int):
-            iter_items = ("stream_id",)
+            iter_items: tuple = ("stream_id",)
         elif isinstance(stream_picks, str):
             iter_items = ("name", 0)
         else:

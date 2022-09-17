@@ -74,3 +74,10 @@ src_paths = ["pte_xdf"]
 
 [tool.mypy]
 python_version = "3.10"
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = [
+  "mne",
+  "pyxdf",
+]
