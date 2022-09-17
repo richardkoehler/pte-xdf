@@ -1,0 +1,75 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+authors = [
+  {name = "Richard M. Köhler"},
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dynamic = ["version", "description"]
+keywords = ["eeg", "ieeg", "tmsi"]
+license = {file = "LICENSE"}
+maintainers = [
+  {name = "Richard M. Köhler"},
+]
+name = "pte-xdf"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.10"
+
+dependencies = [
+  "mne",
+  "numpy",
+  "pyxdf",
+]
+
+[project.optional-dependencies]
+deploy = [
+  "flit",
+]
+dev = [
+  "black",
+  "isort",
+  "mypy",
+  "pylint",
+  "pytest",
+  "pytest-cov",
+  "tox",
+]
+
+[tool.flit.module]
+name = "pte_xdf"
+
+[project.urls]
+bugtracker = "https://github.com/richardkoehler/pte-xdf/issues"
+# changelog = "https://github.com/richardkoehler/pte-xdf/blob/main/doc/CHANGELOG.md"
+repository = "https://github.com/richardkoehler/pte-xdf"
+
+[tool.black]
+exclude = '''
+/(
+  __pycache__
+)/
+'''
+include = '''
+(
+  /src/
+  # | /tests
+)
+'''
+line-length = 79
+target-version = ['py310']
+
+[tool.isort]
+line_length = 79
+profile = "black"
+py_version = 310
+src_paths = ["pte_xdf"]
+
+[tool.mypy]
+python_version = "3.10"
