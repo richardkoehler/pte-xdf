@@ -15,7 +15,11 @@ It provides an interface to load and work with XDF files in [MNE](https://mne.to
 
 Currently, it is only tested with files that were recorded with TMSi amplifiers.
 
+## Documentation
+
 See the full documentation [here](https://richardkoehler.github.io/pte-xdf/).
+
+For a quick start continue reading.
 
 ## Installing pte-xdf
 
