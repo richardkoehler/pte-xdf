@@ -32,7 +32,7 @@ name = "pte_xdf"
 
 [project.urls]
 bugtracker = "https://github.com/richardkoehler/pte-xdf/issues"
-changelog = "https://github.com/richardkoehler/pte-xdf/blob/main/doc/CHANGELOG.md"
+changelog = "https://github.com/richardkoehler/pte-xdf/blob/main/docs/CHANGELOG.md"
 repository = "https://github.com/richardkoehler/pte-xdf"
 
 [tool.black]

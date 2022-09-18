@@ -7,7 +7,7 @@ This package exposes the following functions:
     stream_picks: int | str = 1,
     scale: int | float = 1e-6,
     verbose: VerbosityLevel = True,
-)` - Reader for .xdf files recorded with TMSi amplifiers.
+)` - Reads XDF files (*.xdf) recorded with TMSi amplifiers.
 
 """
 
