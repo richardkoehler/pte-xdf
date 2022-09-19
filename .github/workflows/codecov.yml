@@ -1,7 +1,25 @@
-name: Example workflow for Codecov
-on: [push]
+name: Codecov
+on:
+  push:
+    branches:
+      - main
+      - '*.x'
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+      - '*.rst'
+      - '*.txt'
+  pull_request:
+    branches:
+      - main
+      - '*.x'
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+      - '*.rst'
+      - '*.txt'
 jobs:
-  codecov:
+  run:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -22,9 +40,5 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
-        # env_vars: OS,PYTHON
         fail_ci_if_error: true
-        # files: ./coverage/reports/coverage.xml
         name: codecov-umbrella
-        # path_to_write_report: ./coverage/codecov_report.txt
-        # verbose: true

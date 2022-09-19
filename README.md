@@ -1,6 +1,7 @@
 [![Python Versions][python-shield]][python-url]
-<!-- [![PyPi][pypi-shield]][pypi-url] -->
+[![PyPi][pypi-shield]][pypi-url]
 [![Tests][tests-shield]][tests-url]
+[![Codecov][codecov-shield]][codecov-url]
 [![License][license-shield]][license-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Code Style][codestyle-shield]][codestyle-url]
@@ -104,6 +105,8 @@ PTE Stats is licensed under the [MIT license](license-url).
 [pypi-url]: https://pypi.org/project/pte-xdf/
 [tests-shield]: https://github.com/richardkoehler/pte-xdf/actions/workflows/tests.yml/badge.svg
 [tests-url]: https://github.com/richardkoehler/pte-xdf/actions/workflows/tests.yml
+[codecov-shield]: https://codecov.io/github/richardkoehler/pte-xdf/branch/main/graph/badge.svg?token=PZU4QNK7FR
+[codecov-url]: https://codecov.io/github/richardkoehler/pte-xdf
 [homepage-shield]: https://img.shields.io/static/v1?label=Homepage&message=ICN&logoColor=black&labelColor=grey&color=9cf
 [homepage-url]: https://www.icneuromodulation.org/
 [contributors-shield]: https://img.shields.io/github/contributors/richardkoehler/pte-xdf.svg
