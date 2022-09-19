@@ -10,7 +10,7 @@ For any minor additions or bugfixes, you may simply create a **pull request**.
 When you then create a pull request, be sure to **link the pull request** to the open issue in order to close the issue automatically after merging.
 
 ## I want to contribute myself - how do I get started?
-To contribute yourselves, create a fork of this repository and run `git clone https://github_link_to_fork` as described [above](#dev).
+To contribute yourselves, create a fork of this repository and run `git clone https://github_link_to_fork` as described [here][development-version].
 
 Then create a development branch from your fork.
 

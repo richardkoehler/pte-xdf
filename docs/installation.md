@@ -7,7 +7,7 @@ $ pip install pte-xdf
 ```
 
 
-## <a name="dev"></a>Development version
+## Development version
 
 To install the latest development version, first clone this repository:
 

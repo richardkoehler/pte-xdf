@@ -13,6 +13,7 @@ markdown_extensions:
       check_paths: true
 
 plugins:
+  - autorefs
   - mkdocstrings:
       handlers:
         python:
