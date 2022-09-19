@@ -23,7 +23,7 @@ dependencies = ["mne", "numpy", "pyxdf"]
 
 [project.optional-dependencies]
 dev = ["black", "isort", "mypy", "pylint", "pytest", "pytest-cov", "tox"]
-doc = ["mkdocs", "mkdocs-material", "mkdocstrings[python]"]
+doc = ["mkdocs", "mkdocs-autorefs", "mkdocs-material", "mkdocstrings[python]"]
 full = ["pte-xdf[dev,doc,release]"]
 release = ["pip-tools"]
 
